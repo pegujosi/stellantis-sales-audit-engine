@@ -1,0 +1,23 @@
+--MUESTRA LA CANTIDAD DE NULOS EN LA COLUMNA INDICADA
+SELECT COUNT(*) AS nulos
+FROM fact_ventas
+WHERE venta_bruta IS NULL;
+
+--MUESTRA LA CANTIDAD DE NULOS POR COLUMNA que no es llave primaria
+SELECT
+COUNT(*) FILTER (WHERE fecha IS NULL) AS nulos_fecha,
+COUNT(*) FILTER (WHERE unidades IS NULL) AS nulos_unidades,
+COUNT(*) FILTER (WHERE venta_bruta IS NULL) AS nulos_venta
+FROM fact_ventas;
+
+--MUESTRA LA CANTIDAD TOTAL DE VALORES NULOS EN VENTAS 
+SELECT COUNT(*) - COUNT(*) FILTER (WHERE venta_bruta IS NOT NULL) AS nulos
+FROM fact_ventas;
+
+--MUESTRA LA CANTIDAD TOTAL DE VALORES NO NULOS EN VENTAS 
+SELECT COUNT(*) - COUNT(venta_bruta) AS nulos
+FROM fact_ventas;
+
+--VISION GENERAL DE TABLA
+SELECT *
+FROM fact_ventas;
