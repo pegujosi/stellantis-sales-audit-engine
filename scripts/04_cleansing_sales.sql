@@ -1,12 +1,12 @@
 /*
 ==================================================================================
-AUTOR:       JSPG
-FECHA:       2025-01-22
-DESCRIPCIÓN: Vista limpia de tabla de ventas para reporte.
-PROCESO:     1. Elimina duplicados.
-             2. Pega dos tablas para calcular el promedio por marca.
-             3. Imputa nulos con el promedio de la marca.
-			 4. Genera la vista sin duplicados y sin nulos.
+AUTHOR:     JSPG
+DATE:       2025-01-22
+DESCRIPTION: Sales table clean view to report.
+PROCESS:     1. Delete duplicates.
+             2. Paste two tables and calculates average per brand.
+             3. Imputes nulls and puts the average per brand instead.
+			 4. Create clear, no duplicates and no nulls.
 ==================================================================================
 */
 DROP VIEW IF EXISTS fact_ventas_cl;

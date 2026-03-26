@@ -1,7 +1,3 @@
---View table 
-SELECT *
-FROM dim_clientes;
-
 --Identify errors
 SELECT COUNT(*) AS email_error
 FROM dim_clientes
@@ -10,11 +6,11 @@ OR email LIKE '%@@%';
 
 /*
 ==================================================================================
-AUTOR:       JSPG
-FECHA:       2025-01-22
-DESCRIPCIÓN: Vista limpia de tabla de clientes para reporte.
-PROCESO:     1. Remplaza errores.
-			 2. Genera la vista sin errores '@@' & '_err'.
+AUTHOR:       JSPG
+DATE:        2025-01-22
+DESCRIPTION: Clear view of clients table.
+PROCESS:     1. Fix errors on email adress
+			 2. Creates view without errors of '@@' & '_err'.
 ==================================================================================
 */
 DROP VIEW IF EXISTS dim_clientes_cl;
@@ -34,3 +30,6 @@ SELECT *
 FROM dim_clientes_cl;
 
 
+--General view
+SELECT *
+FROM dim_clientes;

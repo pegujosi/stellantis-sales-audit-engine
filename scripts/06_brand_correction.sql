@@ -1,10 +1,10 @@
 /*
 ==========================================================
-AUTOR:       JSPG
-FECHA:       2025-01-22
-DESCRIPCIÓN: Query para correccion de marcas.
-PROCESO:     1. Remplaza nombre de marcas con minusculas.
-             2. Crea vista con marcas corregidas.
+AUTHOR:       JSPG
+DATE:       2025-01-22
+DESCRIPTION: Query for fix grammar bran.
+PROCESS:     1. Replace brand names with lowercase letters. 
+			 2. Create a view with the corrected brands.
 ==========================================================
 */
 DROP VIEW IF EXISTS dim_vehiculos_cl;
@@ -27,11 +27,11 @@ SELECT modelo, id_vehiculo,
 	'dodge','Dodge') AS marcas_cl
 FROM dim_vehiculos;
 
---Revisa como quedo la vista
+--General view
 SELECT*
 FROM dim_vehiculos_cl;
 
---Agrupa ventas por marca corroborar vs dashboard
+--Goup sales by brand, check against dashboard
 SELECT v.marcas_cl,
 SUM(f.venta_bruta_sn) AS ventas_pormarca
 FROM fact_ventas_cl f

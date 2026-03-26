@@ -1,10 +1,10 @@
 /*
 ===============================================================================
-AUTOR:       JSPG
-FECHA:       2025-01-22
-DESCRIPCIÓN: Vista para obtener los top tres de ventas.
-PROCESO:     1. Junta las tablas de ventas con la de clientes y de geografía.
-             Nota: ya se utilizan las vistas con datos limpios.
+AUTHOR:       JSPG
+DATE:       2025-01-22
+DESCRIPTION: Top three on sales by location view.
+PROCESS:     1. Paste sales table with clients and geography.
+             Note: clear data views are necessary.
 ===============================================================================
 */
 DROP VIEW IF EXISTS top_three;
@@ -17,7 +17,7 @@ ON f.id_cliente = c.id_cliente
 JOIN dim_geografia g
 ON f.id_ubicacion = g.id_ubicacion
 ;
---Visualización de top tres de ventas para comparar con dashboard
+--Top three visualization group by state, compare against dashboard
 WITH ranking AS (
 SELECT *, DENSE_RANK() OVER(PARTITION BY estado ORDER BY venta_bruta_sn DESC) AS top_sales
 FROM top_three

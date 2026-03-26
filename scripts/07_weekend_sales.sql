@@ -1,11 +1,11 @@
 /*
 ============================================================================
-AUTOR:       JSPG
-FECHA:       2025-01-22
-DESCRIPCIÓN: Vista para el reporte de ventas de fin de semana.
-PROCESO:     1. Junta las tablas de ventas con la tabla de calendario.
-             2. Suma las ventas realizadas únicamente en fin de semana.
-             3. Agrupa por anio y mes
+AUTHOR:       JSPG
+DATE:         2025-01-22
+DESCRIPTION: VIEW FOR WEEKEND SALES.
+PROCESS:     1. Paste sales table and calendar table.
+             2. Sums sales done only on weekends.
+             3. Groups by year and month.
 ============================================================================
 */
 CREATE OR REPLACE VIEW ventas_fs AS
