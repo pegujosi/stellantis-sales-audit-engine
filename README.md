@@ -20,4 +20,4 @@ El pipeline sigue un orden lógico de auditoría y limpieza:
 3. Ejecutar los scripts en el orden numérico establecido.
 
 ---
-**Contacto:** [JSPG] - [www.linkedin.com/in/joel-silverio-pérez-guerrero]
+**Contacto:** [JoelSPG] - [www.linkedin.com/in/joel-silverio-pérez-guerrero]
