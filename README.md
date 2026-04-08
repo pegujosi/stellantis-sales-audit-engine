@@ -63,9 +63,7 @@ The dashboard follows an "F" shape:
 1. **Dashboard:** `dashboard.pdf`. On this dashboard we show two main KPI (Total sales and sold vehicles) through four years in several locations, targets for stake holders are; top location on sales and fulfilment of monthly sales. 
 
 #### 🚀 How to execute?
-1. Open `dashboard.pdf` file.
-
-
+1. Open `reports/dashboard.pdf` file.
 
 ---
 **Contacto:** [JoelSPG] - [www.linkedin.com/in/joel-silverio-pérez-guerrero]
