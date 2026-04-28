@@ -3,7 +3,7 @@
 ## Data extraction and cleaning from stellantis_db using SQL
 
 ### 📌 Background 1 (SQL)
-In automotive companies, the integrity of sales and customer data are critical for production, sales and logistics planning. This project simulates a data quality audit and initial cleansing process for a stellantis_db database, To avoid modifying the original database, SQL files create many views, those views also can be loaded for data visualization without affecting original database.
+In automotive companies, the integrity of sales and customer data are critical for production, sales and logistics planning. This project simulates a data quality audit and initial cleansing process for a stellantis_db database, To avoid modifying the original database, SQL files create many views, those views also can be loaded for data visualization without affecting original database, keeping data integrity.
 
 #### 🛠️ Implemented technologies
 * **Data Base:** PostgreSQL
@@ -24,10 +24,10 @@ The pipeline follows a logical order of auditing and cleaning:
 ## Data analysis and transformation from stellantis_db using Python
 
 ### 📌 Background 2 (Python)
-To start handling outliers, we created two files called raw_data.parquet and clean_data.parquet coming from views created previously, We continue doing a deeper cleaning of data, such as changing types and deleting duplicates.
+To start handling outliers, we created two files called raw_data.parquet and clean_data.parquet coming from views created previously on SQL, We continue doing a deeper cleaning of data, such as changing types and deleting duplicates.
 Next, we identify outliers using Median Absolute Deviation and robust Z-score then impute outliers by brand median and create an outlier report (reports/outlier.csv). At the end we can find clean_data.parquet such file does not include nulls, duplicates and outliers.
-Next, we create some normality test and graphs in order to justify statistical treatment of outliers, correlation indicators are ran as well.
-Finally we create a new table on directly from main.py file named fact_ventas_lake, last table is totally cleaned data filled.
+Next, we create some normality test and graphs in order to justify statistical treatment of outliers.
+Finally we create a new table on directly from main.py file named fact_ventas_lake, this last table is totally cleaned data filled.
 
 #### 🛠️ Implemented technologies
 * **Data Base:** Pandas dataframes
@@ -60,7 +60,7 @@ Once data cleaned and transformed is loaded, we make data visualization on power
 
 #### 📂 File structure
 The dashboard follows an "F" shape:
-1. **Dashboard:** `dashboard.pdf`. On this dashboard we show two main KPI (Total sales and sold vehicles) through four years in several locations, targets for stake holders are; top location on sales and fulfilment of monthly sales. 
+1. **Dashboard:** `dashboard.pdf`. On this dashboard we show two main KPI (Total sales and sold vehicles) through four years in several locations, targets for stakeholders are; top location on sales and fulfilment of monthly sales. 
 
 #### 🚀 How to execute?
 1. Open `reports/dashboard.pdf` file.
