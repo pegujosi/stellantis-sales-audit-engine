@@ -26,7 +26,7 @@ The pipeline follows a logical order of auditing and cleaning:
 ### 📌 Background 2 (Python)
 To start handling outliers, we created two files called raw_data.parquet and clean_data.parquet coming from views created previously on SQL, We continue doing a deeper cleaning of data, such as changing types and deleting duplicates.
 Next, we identify outliers using Median Absolute Deviation and robust Z-score then impute outliers by brand median and create an outlier report (reports/outlier.csv). At the end we can find clean_data.parquet such file does not include nulls, duplicates and outliers.
-Next, we create some normality test and graphs in order to justify statistical treatment of outliers.
+Next, we run some normality test and graphs in order to justify statistical treatment of outliers.
 Finally we create a new table on directly from main.py file named fact_ventas_lake, this last table is totally cleaned data filled.
 
 #### 🛠️ Implemented technologies
