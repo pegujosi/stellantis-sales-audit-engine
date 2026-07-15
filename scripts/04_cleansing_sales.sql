@@ -3,7 +3,7 @@
 AUTHOR:     JSPG
 DATE:       2025-01-22
 DESCRIPTION: Sales table clean view to report.
-PROCESS:     1. Delete duplicates.
+PROCESS:     1. Delete  duplicates.
              2. Paste two tables and calculates average per brand.
              3. Imputes nulls and puts the average per brand instead.
 			 4. Create clear, no duplicates and no nulls.

@@ -10,7 +10,7 @@ def ejecutar_notebook(path_notebook):
         
     # Notebook upload
     if not os.path.exists(path_notebook):
-        print(f"❌ Error: El archivo {path_notebook} no existe.")
+        print(f" Error: El archivo {path_notebook} no existe.")
         return False
     with open(path_notebook, 'r', encoding='utf-8') as f:
         nb = nbformat.read(f, as_version=4)
@@ -21,12 +21,12 @@ def ejecutar_notebook(path_notebook):
     try:
         inicio_nb = time.time()
         ep.preprocess(nb, {'metadata': {'path': os.path.dirname(path_notebook)}})
-        print(f"✅ Finalizado con éxito: {path_notebook}")
+        print(f" Finalizado con éxito: {path_notebook}")
         fin_nb = time.time()
-        print(f"✅ {path_notebook} finalizado con éxito ({round(fin_nb - inicio_nb, 2)}s)")
+        print(f" {path_notebook} finalizado con éxito ({round(fin_nb - inicio_nb, 2)}s)")
         return True
     except Exception as e:
-        print(f"❌ ERROR en {path_notebook}:")
+        print(f" ERROR en {path_notebook}:")
         print(f"Detalle: {e}")
         return False
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     for notebook in pipeline:
         exito = ejecutar_notebook(notebook)
         if not exito:
-            print("\n❌Abortando el resto del pipeline.")
+            print("\nAbortando el resto del pipeline.")
             break
     else:
         print("\n ¡Pipeline completo ejecutado con éxito!")
