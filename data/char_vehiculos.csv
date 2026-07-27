@@ -1,0 +1,24 @@
+id_vehiculo,marca,modelo,plataforma
+1,Alfa Romeo,Giulia,Lujo
+2,Alfa Romeo,Stelvio,Lujo
+3,Alfa Romeo,Tonale,SUV
+4,Dodge,Attitude,Familiar
+5,Dodge,Durango,Lujo
+6,Dodge,Journey,SUV
+7,Fiat,Argo,Familiar
+8,Fiat,Ducato,Carga
+9,Fiat,Mobi,Familiar
+10,Fiat,Pulse,SUV
+11,Jeep,Compass,SUV
+12,Jeep,Gladiator,Lujo
+13,Jeep,Grand Cherokee,Lujo
+14,Jeep,Renegade,SUV
+15,Jeep,Wrangler,Lujo
+16,Peugeot,2008,Familiar
+17,Peugeot,3008,SUV
+18,Peugeot,5008,Lujo
+19,Peugeot,Manager,Carga
+20,RAM,1500,Lujo
+21,RAM,2500,Carga
+22,RAM,700,Carga
+23,RAM,Promaster,Carga
